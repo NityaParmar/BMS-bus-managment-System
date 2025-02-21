@@ -104,8 +104,8 @@ wss.on("connection", (ws) => {
         ws.send(JSON.stringify({ type: "bus_locations", buses }));
     };
 
-    // Update locations every 5 seconds
-    const updateInterval = setInterval(updateBusLocations, 5000);
+    // Update locations in every 10 seconds
+    const updateInterval = setInterval(updateBusLocations, 10000);
 
     ws.on("close", () => {
         console.log("Client disconnected");
